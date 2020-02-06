@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:local="clr-namespace:NASA;assembly=NASA"
+             x:Class="NASA.SettingsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Gold" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="img" Source="Planet.png" WidthRequest="170" HeightRequest="170"/>
+            <forms:ChartView x:Name="chart" HeightRequest="150" />
+            <Label Text="{local:Translate CountNow}" TextColor="Lime"/>
+            <Label Text="{local:Translate CountNeed}" TextColor="Red"/>
+            <Button x:Name="InfoButton" Style="{StaticResource buttonStyle}" Text="{local:Translate InfoButton}" Clicked="OnInfoClick"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

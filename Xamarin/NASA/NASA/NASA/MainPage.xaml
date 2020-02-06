@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NASA"
+             x:Class="NASA.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Gold" />
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="WidthRequest" Value="170"/>
+                <Setter Property="HeightRequest" Value="60"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="170" Spacing="27">
+                <Button x:Name="buttonBegin" Text="{Binding Path=Resorces.buttonBegin}"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource buttonStyle}"
+                Clicked="BE_Click"/>
+
+                <Button x:Name="buttonLanguage" Text="{Binding Path=Resorces.buttonLanguage}"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource buttonStyle}"
+                Clicked="BL_Click"/>
+                    
+                <Button x:Name="buttonInfo" Text="{Binding Path=Resorces.buttonInfo}"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource buttonStyle}"
+                Clicked="BI_Click"/>
+            </StackLayout>
+            <Image x:Name="Logo"  Source="Icon.png" WidthRequest="150" HeightRequest="124"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

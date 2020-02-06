@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NASA.RedactorPage"
+             xmlns:local="clr-namespace:NASA;assembly=NASA">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Gold" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Spacing="10">
+
+                    <StackLayout Spacing="3">
+                        <Image x:Name="Photo" Source="{Binding Path=PhotoPath}" HorizontalOptions="Center" WidthRequest="300" HeightRequest="300"/>
+                        <Button x:Name="PhotoButton"
+                                HorizontalOptions="Center" 
+                                Text="{local:Translate PhotoButton}"
+                                Style="{StaticResource buttonStyle}"
+                                Clicked="OnPBClick"/>
+
+                        <Label Text="{local:Translate GeneralData}" Style="{StaticResource labelStyle}" HorizontalOptions="Start"/>
+                        <Label Text="{local:Translate Name}"/>
+                        <Entry x:Name="NameField" Keyboard="Default"/>
+                        <Label Text="{local:Translate Nationality}"/>
+                        <Entry x:Name="NationalityField" Keyboard="Default"/>
+                        <Label Text="{local:Translate Gender}"/>
+                        <Picker x:Name="GenderPicker"
+                                SelectedIndexChanged="OnGenderSelect"
+                                ItemsSource="{Binding Genders}"/>
+
+                        <Label Text="{local:Translate BornDate}"/>
+                        <DatePicker x:Name="BirthDatePicker" Format="D" DateSelected="OnBirthDateSelect"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="3">
+                        <Label Text="{local:Translate PhysicalData}" Style="{StaticResource labelStyle}" HorizontalOptions="Start"/>
+                        <Label Text="{local:Translate Height}"/>
+                        <Entry x:Name="HeightField" Keyboard="Numeric"/>
+                        <Label Text="{local:Translate Weight}"/>
+                        <Entry x:Name="WeightField" Keyboard="Numeric"/>
+                        <Label Text="{local:Translate Eyes}"/>
+                        <Entry x:Name="EyesField" Keyboard="Numeric"/>
+                        <Label Text="{local:Translate FlyTime}"/>
+                        <Entry x:Name="FlyTimeField" Keyboard="Numeric"/>
+                        <Label Text="{local:Translate Exams}"/>
+                        <Picker x:Name="ExamsPicker"
+                                SelectedIndexChanged="OnAnswerSelect"
+                                ItemsSource="{Binding Answers}"/>
+
+                        <Label Text="{local:Translate Doctor}"/>
+                        <Editor x:Name="DoctorField" HeightRequest="150" BackgroundColor="Aquamarine"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="3">
+                        <Label Text="{local:Translate EducationData}" Style="{StaticResource labelStyle}" HorizontalOptions="Start"/>
+
+                        <Label Text="{local:Translate Schools}"/>
+                        <Entry x:Name="SchoolField" Placeholder="{local:Translate AddPH}"/>
+                        
+                        <Button x:Name="AddSchoolButton" 
+                                Text="{local:Translate AddSchoolButton}" 
+                                HorizontalOptions="End"
+                                Clicked="OnSchoolAdd"
+                                Style="{StaticResource buttonStyle}"/>
+                        
+                        <Picker x:Name="SchoolsPicker"
+                                Title="{local:Translate Show}"
+                                SelectedIndexChanged="OnSchoolSelect"/>
+
+                        <Button x:Name="ClearSchoolsButton" 
+                                Text="{local:Translate ClearSchoolsButton}" 
+                                HorizontalOptions="End" Clicked="OnSchoolClear"
+                                Style="{StaticResource buttonStyle}"/>
+                        
+                        <Label Text="{local:Translate WorkYears}"/>
+                        <Entry x:Name="WorkYearsField" Keyboard="Numeric"/>
+                    </StackLayout>
+
+                    <StackLayout Spacing="3">
+                        <Label Text="{local:Translate PersonalData}" Style="{StaticResource labelStyle}" HorizontalOptions="Start"/>
+                        <Label Text="{local:Translate Password}"/>
+                        <Entry Placeholder="{local:Translate EnterPassword}" x:Name="PasswordField" IsPassword ="True" />
+                        <Entry Placeholder="{local:Translate RepeatPassword}" x:Name="RepeatPassword" IsPassword ="True" />
+                        <Button Text="{local:Translate Show}" 
+                                x:Name="VisibleButton" 
+                                HorizontalOptions="End" 
+                                Pressed="OnHold" 
+                                Released="OnRelease"
+                                Style="{StaticResource buttonStyle}"/>
+                        
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+            <Button x:Name="EnterButton" 
+                    Text="{local:Translate EnterButton}" 
+                    HorizontalOptions="Center" Clicked="OnClickEnter"
+                    Style="{StaticResource buttonStyle}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

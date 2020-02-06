@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NASA.AstroPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Gold" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="Search"
+                CancelButtonColor="Blue"
+                TextColor="Red"
+                FontSize="Medium"
+                TextChanged="OnTextChanged"/>
+            <ListView x:Name="listView"
+                HasUnevenRows="True"
+                ItemsSource="{Binding}" 
+                ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Path=ImagePath}" WidthRequest="50" HeightRequest="50"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" TextColor="Blue"/>
+                                    <Label Text="{Binding BirthYear}" TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Button x:Name="ButtonAdd"
+                HorizontalOptions="Center" 
+                Clicked="OnClick"
+                Style="{StaticResource buttonStyle}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

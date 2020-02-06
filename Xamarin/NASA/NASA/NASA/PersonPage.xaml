@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NASA.PersonPage"
+             xmlns:local="clr-namespace:NASA;assembly=NASA">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Gold" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView
+                    HasUnevenRows="True"
+                    Intent="Data">
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="{local:Translate GeneralData}">
+                            <ViewCell>
+                                <StackLayout>
+                                    <Image x:Name="Photo" HorizontalOptions="Center" WidthRequest="300" HeightRequest="300"/>
+                                    <Label Text="{Binding Path=Person.Name}" TextColor="Blue"/>
+                                    <Label x:Name="Nationality" Text="{local:Translate Nationality}" TextColor="Blue"/>
+                                    <Label x:Name="Gender" Text="{local:Translate Gender}" TextColor="Blue"/>
+                                    <Label x:Name="BornDate" Text="{local:Translate BornDate}" TextColor="Blue"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="{local:Translate PhysicalData}">
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label x:Name="Height" Text="{local:Translate Height}" TextColor="Red"/>
+                                    <Label x:Name="Weight" Text="{local:Translate Weight}" TextColor="Red"/>
+                                    <Label x:Name="Eyes" Text="{local:Translate Eyes}" TextColor="Red"/>
+                                    <Label x:Name="FlyTime" Text="{local:Translate FlyTime}" TextColor="Red"/>
+                                    <Label x:Name="Exams" Text="{local:Translate Exams}" TextColor="Red"/>
+                                    <Label Text="{local:Translate Doctor}" TextColor="Red"/>
+                                    <Editor Text="{Binding Path=Person.DoctorVerdict}" 
+                                            TextColor="Red"
+                                            HeightRequest="150" 
+                                            BackgroundColor="Aquamarine"
+                                            IsEnabled="False"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="{local:Translate EducationData}">
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{local:Translate Schools}" TextColor="Black"/>
+                                    <Picker x:Name="SchoolsPicker"
+                                        ItemsSource="{Binding Path=Person.Schools}"
+                                        Title="{local:Translate Show}"
+                                        SelectedIndexChanged="OnSchoolSelect"/>
+
+                                    <Label x:Name="WorkYears" Text="{local:Translate WorkYears}" TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="ChangeButton" 
+                        Text="{local:Translate ChangeButton}" 
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnClickChange"/>
+                
+                <Button x:Name="DeleteButton" 
+                        Text="{local:Translate DeleteButton}"
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnClickDelete"/>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

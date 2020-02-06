@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddPH" xml:space="preserve">
+    <value>добавление</value>
+  </data>
+  <data name="AddSchoolButton" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="BornDate" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="ButtonAdd" xml:space="preserve">
+    <value>Добавить кандидатуру</value>
+  </data>
+  <data name="buttonBegin" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="buttonInfo" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="buttonLanguage" xml:space="preserve">
+    <value>Язык:RU</value>
+  </data>
+  <data name="ClearSchoolsButton" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Решение врача</value>
+  </data>
+  <data name="EducationData" xml:space="preserve">
+    <value>Образование и работа</value>
+  </data>
+  <data name="EnterButton" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Exams" xml:space="preserve">
+    <value>Физ.контроль</value>
+  </data>
+  <data name="Eyes" xml:space="preserve">
+    <value>Зрение(dptr)</value>
+  </data>
+  <data name="F" xml:space="preserve">
+    <value>Женский</value>
+  </data>
+  <data name="FlyTime" xml:space="preserve">
+    <value>Общее время полёта(h)</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="GeneralData" xml:space="preserve">
+    <value>Общие данные</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Высота(cm)</value>
+  </data>
+  <data name="M" xml:space="preserve">
+    <value>Мужской</value>
+  </data>
+  <data name="N" xml:space="preserve">
+    <value>Не пройден</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Национальность</value>
+  </data>
+  <data name="PhotoButton" xml:space="preserve">
+    <value>Выбрать фото</value>
+  </data>
+  <data name="PhysicalData" xml:space="preserve">
+    <value>Физические данные</value>
+  </data>
+  <data name="Schools" xml:space="preserve">
+    <value>Учреждения образования</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>показать</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Вес(kg)</value>
+  </data>
+  <data name="Y" xml:space="preserve">
+    <value>Пройден</value>
+  </data>
+  <data name="BadFormat" xml:space="preserve">
+    <value>Необходимые поля не заполнены или заполнены неверно.</value>
+  </data>
+  <data name="BadPassword" xml:space="preserve">
+    <value>Неверный формат пароля. Допустимы цифры и символы латиницы.</value>
+  </data>
+  <data name="ChangeButton" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>введите пароль</value>
+  </data>
+  <data name="ErrorMes" xml:space="preserve">
+    <value>Ошибка!</value>
+  </data>
+  <data name="NoRepeat" xml:space="preserve">
+    <value>Неверно повторён пароль.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordMes" xml:space="preserve">
+    <value>Изменять и удалять запись может только пользователь, создавший её. Введите пароль для подтверждения личности.</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Персональные данные</value>
+  </data>
+  <data name="RepeatPassword" xml:space="preserve">
+    <value>повторить пароль</value>
+  </data>
+  <data name="SimplePassword" xml:space="preserve">
+    <value>Пароль ненадёжен(менее 8 символов).</value>
+  </data>
+  <data name="WorkYears" xml:space="preserve">
+    <value>Стаж работы по специальности(лет)</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Пароль неверный</value>
+  </data>
+  <data name="CameraButton" xml:space="preserve">
+    <value>Сделать фото</value>
+  </data>
+  <data name="CountNeed" xml:space="preserve">
+    <value>Необходимое количество</value>
+  </data>
+  <data name="CountNow" xml:space="preserve">
+    <value>Всего участников программы</value>
+  </data>
+  <data name="InfoButton" xml:space="preserve">
+    <value>Узнать больше</value>
+  </data>
+</root>
